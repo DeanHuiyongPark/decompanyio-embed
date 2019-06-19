@@ -1,0 +1,24 @@
+extends layout
+
+append styles
+    // Custom styles for this template
+    link(href="../css/carousel.css", rel="stylesheet")
+
+block body
+    script(type="text/javascript").
+        console.log(11);
+        $(".carousel").carousel({
+            keyboard: true,
+            interval: 0
+        });
+
+    // Carousel
+    // ==================================================
+    +carousel("myCarousel",[{
+        image: "../img/img-banner-01.png",
+    }, {
+        image: "../img/img-banner-02.png",
+    }, {
+        image: "../img/img-banner-03.png",
+    }])
+
